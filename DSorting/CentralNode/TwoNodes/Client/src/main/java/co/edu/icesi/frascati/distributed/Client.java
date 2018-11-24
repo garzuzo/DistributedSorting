@@ -18,11 +18,11 @@ public class Client implements Runnable {
 	
 	public void generateArrays() {
 
-		arrTen = ag.arrays(10000000);
-		arrTw = ag.arrays(20000000);
-		arrTh = ag.arrays(30000000);
-		arrFo = ag.arrays(40000000);
-		arrFi = ag.arrays(50000000);
+		arrTen = ag.arrays(12000000);
+		arrTw = ag.arrays(24000000);
+		arrTh = ag.arrays(36000000);
+		arrFo = ag.arrays(48000000);
+		arrFi = ag.arrays(60000000);
 
 	}
 

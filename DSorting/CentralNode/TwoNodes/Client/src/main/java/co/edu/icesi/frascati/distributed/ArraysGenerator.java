@@ -10,7 +10,14 @@ import java.io.PrintWriter;
 
 public class ArraysGenerator {
 
-	
+	public static void main(String args[]) {
+		arrays(12000000);
+		arrays(24000000);
+		arrays(36000000);
+		arrays(48000000);
+		arrays(60000000);
+
+	}
 
 	public static String[] arrays(int n) {
 
@@ -18,14 +25,17 @@ public class ArraysGenerator {
 		// se lee el archivo y se pasa el string
 
 		writer(n);
-		File file = new File("./" + n + ".txt");
-		String[] arr=null;
+		File file = new File("./src/main/resources/" + n + ".txt");
+		String[] arr = new String[n];
 		if (file.exists()) {
 			try {
 				FileReader fr = new FileReader(file);
 				BufferedReader br = new BufferedReader(fr);
-				arr = br.readLine().split(" ");
 
+				for (int i = 0; i < n; i++) {
+					arr[i] = br.readLine();
+
+				}
 			} catch (Exception e) {
 				System.out.println("No se completo el procedimiento.");
 				e.printStackTrace();
@@ -33,6 +43,7 @@ public class ArraysGenerator {
 			}
 
 		}
+		System.out.println("created!");
 		return arr;
 	}
 
@@ -40,13 +51,13 @@ public class ArraysGenerator {
 
 		BufferedWriter out;
 		try {
-			out = new BufferedWriter(new FileWriter("./" + n + ".txt"));
+			out = new BufferedWriter(new FileWriter("./src/main/resources/" + n + ".txt"));
 
 			for (int i = 0; i < n; i++) {
 				// rango 1-10
 				// int r1=(int) (Math.random()*30)+1;
 
-				for (int r1 = 0; r1 < 20; r1++) {
+				for (int r1 = 0; r1 < 10; r1++) {
 					// rango de letras a-z
 					char cAct = (char) ((int) (Math.random() * (122 - 97)) + 97);
 					out.write(cAct + "");
@@ -54,7 +65,7 @@ public class ArraysGenerator {
 				}
 
 				if (i + 1 != n)
-					out.write(" ");
+					out.write("\n");
 
 			}
 			out.close();
