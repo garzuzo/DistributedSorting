@@ -10,14 +10,7 @@ import java.io.PrintWriter;
 
 public class ArraysGenerator {
 
-	public static void main(String args[]) {
-		arrays(12000000);
-		arrays(24000000);
-		arrays(36000000);
-		arrays(48000000);
-		arrays(60000000);
 
-	}
 
 	public static String[] arrays(int n) {
 
@@ -27,7 +20,7 @@ public class ArraysGenerator {
 		writer(n);
 		File file = new File("./src/main/resources/" + n + ".txt");
 		String[] arr = new String[n];
-		if (file.exists()) {
+		
 			try {
 				FileReader fr = new FileReader(file);
 				BufferedReader br = new BufferedReader(fr);
@@ -40,7 +33,7 @@ public class ArraysGenerator {
 				System.out.println("No se completo el procedimiento.");
 				e.printStackTrace();
 
-			}
+			
 
 		}
 		System.out.println("created!");
@@ -51,27 +44,31 @@ public class ArraysGenerator {
 
 		BufferedWriter out;
 		try {
-			out = new BufferedWriter(new FileWriter("./src/main/resources/" + n + ".txt"));
+			File file = new File("./src/main/resources/" + n + ".txt");
+			if (!file.exists()) {
+				out = new BufferedWriter(new FileWriter("./src/main/resources/" + n + ".txt"));
 
-			for (int i = 0; i < n; i++) {
-				// rango 1-10
-				// int r1=(int) (Math.random()*30)+1;
+				for (int i = 0; i < n; i++) {
+					// rango 1-10
+					// int r1=(int) (Math.random()*30)+1;
 
-				for (int r1 = 0; r1 < 10; r1++) {
-					// rango de letras a-z
-					char cAct = (char) ((int) (Math.random() * (122 - 97)) + 97);
-					out.write(cAct + "");
+					for (int r1 = 0; r1 < 5; r1++) {
+						// rango de letras a-z
+						char cAct = (char) ((int) (Math.random() * (122 - 97)) + 97);
+						out.write(cAct + "");
+
+					}
+
+					if (i + 1 != n)
+						out.write("\n");
 
 				}
-
-				if (i + 1 != n)
-					out.write("\n");
-
+				out.close();
+			} else {
+				System.out.println("No se crearon las palabras, ya existe el archivo");
 			}
-			out.close();
-
 		} catch (IOException e) {
-			System.out.println("No se crearon las palabras");
+			System.out.println("Hubo un error");
 		}
 	}
 }
