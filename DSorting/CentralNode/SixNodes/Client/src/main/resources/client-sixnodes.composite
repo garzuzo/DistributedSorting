@@ -3,7 +3,7 @@
 <composite xmlns="http://www.osoa.org/xmlns/sca/1.0"
   xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1"
   targetNamespace="http://frascati.ow2.org/helloworld-rmi"
-  name="client-twonodes">
+  name="client-sixnodes">
 
   <service name="r" promote="client/r">
     <interface.java interface="java.lang.Runnable" />
@@ -19,7 +19,7 @@
       <frascati:binding.rmi host="localhost" serviceName="mergeSortService" port="1099"/>
     </reference>
 
-    <implementation.java class="co.edu.icesi.frascati.distributed.MergeSort" />
+    <implementation.java class="co.edu.icesi.frascati.distributed.Client" />
 
   </component>
 

@@ -19,7 +19,7 @@
       <frascati:binding.rmi host="localhost" serviceName="mergeSortService" port="1099"/>
     </reference>
 
-    <implementation.java class="co.edu.icesi.frascati.distributed.MergeSort" />
+    <implementation.java class="co.edu.icesi.frascati.distributed.Client" />
 
   </component>
 
