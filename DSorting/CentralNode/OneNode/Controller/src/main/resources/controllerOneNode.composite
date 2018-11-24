@@ -6,9 +6,7 @@
 			<interface.java interface="co.edu.icesi.frascati.distributed.IDistSort" />
 			<frascati:binding.rmi host="localhost" serviceName="mergeSortService" port="1095"/>
 		</service>
-		<reference name="IMerge">
-			<frascati:binding.rmi host="localhost" serviceName="mergeSortService" port="1094"/>
-		</reference>
+		
 		<reference name="IMergeSort1">
 			<frascati:binding.rmi host="localhost" serviceName="mergeSortService" port="1098"/>
 		</reference>
