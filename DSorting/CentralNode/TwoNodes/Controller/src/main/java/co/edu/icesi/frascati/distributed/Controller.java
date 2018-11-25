@@ -28,7 +28,7 @@ public class Controller implements IDistSort{
 		
 	private CyclicBarrier cyclicBarrier;
 	
-	public String[] sort (String[] cadena) {
+	public String[] mergeSort (String[] cadena) {
 
 		// TODO Auto-generated method stub
 		cyclicBarrier = new CyclicBarrier(3);

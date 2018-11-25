@@ -50,7 +50,7 @@ public class Client implements Runnable {
 			arrTen = sort.mergeSort(arrTen);
 			long end = System.currentTimeMillis();
 			long totalTime = end - start;
-			System.out.println("arreglo 1200000:" + totalTime);
+			System.out.println("arreglo "+n1+":" + totalTime);
 
 			// se escribe en otro archivo el tiempo
 			FileWriter fw2 = new FileWriter(new File(path + "Tiempo_" + n1 + ".txt"));
@@ -65,7 +65,7 @@ public class Client implements Runnable {
 			arrTw = sort.mergeSort(arrTw);
 			end = System.currentTimeMillis();
 			totalTime = end - start;
-			System.out.println("arreglo 2400000:" + totalTime);
+			System.out.println("arreglo "+n2+":" + totalTime);
 
 			// se escribe en otro archivo el tiempo
 			fw2 = new FileWriter(new File(path + "Tiempo_" + n2 + ".txt"));
@@ -80,7 +80,7 @@ public class Client implements Runnable {
 			arrTh = sort.mergeSort(arrTh);
 			end = System.currentTimeMillis();
 			totalTime = end - start;
-			System.out.println("arreglo 3600000:" + totalTime);
+			System.out.println("arreglo "+n3+":" + totalTime);
 
 			// se escribe en otro archivo el tiempo
 			fw2 = new FileWriter(new File(path + "Tiempo_" + n3 + ".txt"));
@@ -95,7 +95,7 @@ public class Client implements Runnable {
 			arrFo = sort.mergeSort(arrFo);
 			end = System.currentTimeMillis();
 			totalTime = end - start;
-			System.out.println("arreglo 4800000:" + totalTime);
+			System.out.println("arreglo "+n4+":" + totalTime);;
 
 			// se escribe en otro archivo el tiempo
 			fw2 = new FileWriter(new File(path + "Tiempo_" + n4 + ".txt"));
@@ -110,7 +110,7 @@ public class Client implements Runnable {
 			arrSi = sort.mergeSort(arrSi);
 			end = System.currentTimeMillis();
 			totalTime = end - start;
-			System.out.println("arreglo 6000000:" + totalTime);
+			System.out.println("arreglo "+n5+":" + totalTime);
 
 			// se escribe en otro archivo el tiempo
 			fw2 = new FileWriter(new File(path + "Tiempo_" + n5 + ".txt"));
