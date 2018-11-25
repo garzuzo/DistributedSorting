@@ -4,11 +4,11 @@
 	<component name="Controller">
 		<service name="IDistSort">
 			<interface.java interface="co.edu.icesi.frascati.distributed.IDistSort" />
-			<frascati:binding.rmi host="localhost" serviceName="mergeSortService" port="1095"/>
+			<frascati:binding.rmi host="localhost" serviceName="rmiService" port="1096"/>
 		</service>
 		
 		<reference name="IMergeSort1">
-			<frascati:binding.rmi host="localhost" serviceName="mergeSortService" port="1098"/>
+			<frascati:binding.rmi host="localhost" serviceName="rmiService" port="1095"/>
 		</reference>
 		
 		

@@ -9,7 +9,7 @@ import org.osoa.sca.annotations.Reference;
 
 public class Client implements Runnable {
 
-	@Reference(name = "sort")
+	@Reference(name = "IDistSort")
 	private IDistSort sort;
 
 	private ArraysGenerator ag;

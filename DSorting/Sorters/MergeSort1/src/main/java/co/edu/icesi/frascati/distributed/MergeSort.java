@@ -2,7 +2,7 @@ package co.edu.icesi.frascati.distributed;
 
 public class MergeSort implements IMergeSort {
 
-	@Override
+	
 	public String[] partialMergeSort(String[] arr, int l, int r) {
 
 		arr = sort(arr, l, r);

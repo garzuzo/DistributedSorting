@@ -13,11 +13,10 @@ public class Controller implements IDistSort {
 
 	private String[] arr1;
 
-
-	public String[] sort(String[] cadena) {
+	public String[] mergeSort(String[] cadena) {
 
 		System.out.println("Controller comienza su proceso para el arreglo de tamanio: " + cadena.length);
-		arr1 = mergeSort1.partialMergeSort(cadena, 0, cadena.length);
+		arr1 = mergeSort1.partialMergeSort(cadena, 0, cadena.length-1);
 
 		System.out.println("Controller Finished");
 

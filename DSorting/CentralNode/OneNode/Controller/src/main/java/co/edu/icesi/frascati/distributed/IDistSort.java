@@ -5,5 +5,5 @@ import org.osoa.sca.annotations.Service;
 @Service
 public interface IDistSort {
 
-	public String[] sort(String[] cadena);
+	public String[] mergeSort(String[] cadena);
 }

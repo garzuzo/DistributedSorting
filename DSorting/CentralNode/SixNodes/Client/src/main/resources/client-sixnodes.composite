@@ -15,7 +15,7 @@
       <interface.java interface="java.lang.Runnable" />
     </service>
 
-    <reference name="sort">
+    <reference name="IDistSort">
       <frascati:binding.rmi host="localhost" serviceName="mergeSortService" port="1099"/>
     </reference>
 
