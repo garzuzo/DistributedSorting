@@ -52,7 +52,7 @@ public class ArraysGenerator {
 					// rango 1-10
 					// int r1=(int) (Math.random()*30)+1;
 
-					for (int r1 = 0; r1 < 60; r1++) {
+					for (int r1 = 0; r1 < 30; r1++) {
 						// rango de letras a-z
 						char cAct = (char) ((int) (Math.random() * (122 - 97)) + 97);
 						out.write(cAct + "");
